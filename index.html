@@ -52,7 +52,7 @@ img {
 
 <body>
 
-<h1>❤️ for the most amazing women in the galaxy ❤️</h1>
+<h1>❤️ for the most amazing woman in the galaxy ❤️</h1>
 
 <!-- MUSIC -->
 <audio autoplay loop>
@@ -78,26 +78,30 @@ img {
 <div class="card">
   <h2>🔐 Secret</h2>
   <button onclick="unlockSecret()">Unlock</button>
-  <p id="secret">you are the best thing that’s ever happened to me. I love you more than anything you have shown me so much and im thankful for you every day I will love you till the day i take my last breathe ❤️</p>
+  <p id="secret">
+    you are the best thing that’s ever happened to me. I love you more than anything 
+    you have shown me so much and im thankful for you every day 
+    I will love you till the day i take my last breathe ❤️
+  </p>
 </div>
+
 <!-- EMOTIONAL BUTTONS -->
 <div class="card">
   <h2>💭 Open When...</h2>
 
   <button onclick="sadMessage()">When you're sad</button>
-  <p id="When life gets hard rememberyou are the keeper of your happiness you make the world move and that you can do anything you put your mind to youre an amazing human who is capable of conquring the world"></p>
+  <p id="sadText"></p>
 
   <br><br>
 
   <button onclick="loveReminder()">Reminder I love you</button>
-  <p id="IF you are ever questioning if i love you here is why i love you, you make life so fun and speical when your around you make my heart skip. 
-    I knew when we matched that day that I was gonna marry you and take care of you for life meeting you has been the best thing thats ever happened to me you mean so much to me"></p>
+  <p id="loveReminderText"></p>
 </div>
-  
+
 <script>
 function showMessage() {
   const messages = [
-     "I love you more than I can ever explain ❤️",
+    "I love you more than I can ever explain ❤️",
     "You are the best thing in my life.",
     "I’d choose you in every lifetime.",
     "You make my world better just by being in it.",
@@ -114,6 +118,32 @@ function unlockSecret() {
   } else {
     alert("Wrong password 😢");
   }
+}
+
+function sadMessage() {
+  const messages = [
+    "When life gets hard remember you are the keeper of your happiness.",
+    "You make the world move and you can do anything you put your mind to.",
+    "You’re an amazing human capable of conquering anything.",
+    "No matter what, I’m always here for you.",
+    "You are stronger than you think."
+  ];
+
+  const random = messages[Math.floor(Math.random() * messages.length)];
+  document.getElementById("sadText").innerText = random;
+}
+
+function loveReminder() {
+  const messages = [
+    "I love you more than I can ever explain ❤️",
+    "You make life so fun and special when you're around.",
+    "You make my heart skip every time.",
+    "From the moment we matched, I knew you were special.",
+    "Meeting you has been the best thing that’s ever happened to me."
+  ];
+
+  const random = messages[Math.floor(Math.random() * messages.length)];
+  document.getElementById("loveReminderText").innerText = random;
 }
 </script>
 
