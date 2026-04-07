@@ -84,8 +84,8 @@ img {
 function showMessage() {
   const messages = [
     "I love you ❤️",
-    "You make my life better",
-    "You’re my favorite person",
+    "You showed me how to love",
+    "You’re my best friend",
     "I’d choose you every time"
   ];
   const random = messages[Math.floor(Math.random() * messages.length)];
@@ -94,7 +94,7 @@ function showMessage() {
 
 function unlockSecret() {
   const password = prompt("Enter the secret password:");
-  if (password === "iloveyou") {
+  if (password === "theonepiece") {
     document.getElementById("secret").style.display = "block";
   } else {
     alert("Wrong password 😢");
